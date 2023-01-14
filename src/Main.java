@@ -24,7 +24,22 @@ public class Main {
 
         catList.add(new Cat("Бегемот 2"));
 
-    System.out.println(catList.toString());
+
+        catList.remove(1);
+
+        Cat cat = catList.get(0);
+        System.out.println(cat);
+
+        System.out.println(catList.indexOf(cat));
+
+        catList.add(2, cat);
+        catList.set(2, new Cat ("Меня сюда вставили"));
+
+        catList.removeAll(Arrays.asList(cat,catList.get(3)));
+
+        System.out.println(catList.toString());
+
+        System.out.println(catList.size());
 
     }
 
