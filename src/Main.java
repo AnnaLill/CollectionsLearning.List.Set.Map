@@ -23,10 +23,10 @@ public class Main {
             catList.add(cat);
         }
 
-        catList.add(new Cat("Бегемот 2"));
+        catList.add(new Cat("Бегемот"));
 
 
-        catList.remove(1);
+        //catList.remove(1);
 
         Cat cat = catList.get(0);
         System.out.println(cat);
@@ -36,7 +36,7 @@ public class Main {
         catList.add(2, cat);
         catList.set(2, new Cat ("Меня сюда вставили"));
 
-        catList.removeAll(Arrays.asList(cat,catList.get(3)));
+        //catList.removeAll(Arrays.asList(cat,catList.get(3)));
 
         System.out.println(catList.toString());
 
@@ -110,6 +110,35 @@ public class Main {
 
         System.out.println("Время работы для ArrayList в (милисекундах)" +
                 (System.currentTimeMillis()- start));
+
+
+        // Set
+        Set<String> states = new HashSet<>();
+        states.add("Germany");
+        states.add("France");
+        states.add("Italy");
+
+        boolean isAdded = states.add("Italy");
+        System.out.println("Italy is added : " + isAdded);
+        System.out.println("Set contains: " + states.size());
+
+        System.out.println(states);
+
+        states.remove("Germany");
+
+        System.out.println(states);
+
+
+        HashSet<Cat> catHashSet = new HashSet(catList);
+        System.out.println(catHashSet);
+
+        TreeSet<Cat> catTreeSet = new TreeSet<>(catList);
+
+        System.out.println(catTreeSet);
+
+
+        //Map
+
 
 
 
